@@ -10,8 +10,8 @@ public class HelloThreadMain {
         HelloThread helloThread = new HelloThread();
         helloThread.run();
         helloThread.start();
-        System.out.println(Thread.currentThread().getName() + ": run 호출 후");
         System.out.println(Thread.currentThread().getName() + ": main() end");
+        System.out.println(Thread.currentThread().getName() + ": run 호출 후");
 
     }
 }
