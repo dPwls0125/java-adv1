@@ -1,6 +1,5 @@
 package thread.control;
 
-import java.util.concurrent.Callable;
 import static util.MyLogger.log;
 
 public class ThreadStateMain {
@@ -26,7 +25,6 @@ public class ThreadStateMain {
             }
             log("sleep() end");
             log("end");
-            // Callable
         }
     }
 
