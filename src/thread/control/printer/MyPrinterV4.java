@@ -1,6 +1,5 @@
 package thread.control.printer;
 
-
 import java.io.BufferedInputStream;
 import java.util.Queue;
 import java.util.Scanner;
@@ -8,7 +7,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 import static util.MyLogger.log;
 
-public class MyPrinterV3 {
+public class MyPrinterV4 {
     public static void main(String[] args) {
 
         Printer printer  = new Printer();
@@ -35,6 +34,7 @@ public class MyPrinterV3 {
             while(!Thread.interrupted()){
 
                 if(jobQueue.isEmpty()){
+                    Thread.yield(); // 다른 쓰레드에게 Runnable_Running 상태를 양보함
                     continue;
                 }
                 try{
